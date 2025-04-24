@@ -1,0 +1,124 @@
+/* Estilos generales */
+:root {
+    --primary: #784d3c;
+    --secondary: #e1c7a7;
+    --light: #f9f5f0;
+    --dark: #2d1e15;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--dark);
+    background-color: var(--light);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: var(--primary);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.subtitle {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Contenido principal */
+main {
+    padding: 40px 0;
+}
+
+h2 {
+    color: var(--primary);
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+/* Entradas del blog */
+.blog-entries {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.entry {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.entry-content {
+    padding: 20px;
+}
+
+.entry h3 {
+    color: var(--primary);
+    margin-top: 0;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background-color: #5a3a2d;
+}
+
+/* Cursos */
+.courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.course {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.course h3 {
+    color: var(--primary);
+}
+
+.price {
+    font-weight: bold;
+    color: var(--primary);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}

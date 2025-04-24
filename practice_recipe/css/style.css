@@ -1,0 +1,97 @@
+@import url(https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap);
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #F5e2e3;
+    font-family: Playfair Display, serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+main{
+    background-color: white;
+    margin: 10em 20em; 
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 50%;
+}
+
+figure{
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+h1{
+    font-style: italic;
+    font-size: 3em;
+}
+
+h4{
+    font-style: italic;
+    color: #750102;
+    margin: 5px;
+}
+
+article{
+    background-color: #FFDDEF;
+    border-radius: 10px;
+    margin: 1em;
+    padding: 0.5% 3%;
+}
+
+section{
+    margin: 1em;
+}
+
+h3{
+    font-style: italic;
+    color: #750102;
+    margin: 5px;
+}
+
+hr{
+    border: 0;
+    height: 1px;
+    background-color: grey;
+    margin: 1em;
+}
+
+ul li::marker {
+    color: #750102;
+}
+
+ol li::marker {
+    color: #750102;
+}
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 10px;
+
+}
+
+tr {
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    vertical-align: middle; 
+}
+
+td {
+    padding: 8px;
+    vertical-align: middle; 
+}
+
+.columna {
+    color: #750102;
+}

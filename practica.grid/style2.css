@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/**Pseudoclase :Root**/
+:root {
+    --box-color: #bd0f0f;
+    --secundary-color: #d66d0a;
+    --font-family: 'Poppins', sans-serif;
+}
+.gridbox {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+}
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: var(--box-color);
+    border-radius: 10px;
+    display: flex;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.gridbox .box:nth-child(1) {
+    /** el 1 es la fila */
+    /** el 1 es la columna */
+    /** el 2 es la fila */
+    /** el 6 es la columna */
+    grid-area: 1/1/2/3;
+    width: auto;
+} 
+.gridbox .box:nth-child(2) {
+    /** el 1 es la fila */
+    /** el 1 es la columna */
+    /** el 2 es la fila */
+    /** el 6 es la columna */
+    grid-area: 1/3/1/4;
+    width: auto;
+}   
+.gridbox .box:nth-child(3) {
+    /** el 1 es la fila */
+    /** el 1 es la columna */
+    /** el 2 es la fila */
+    /** el 6 es la columna */
+    grid-area: 1/4/1/7;
+    width: auto;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+}
+.grid-container .box:nth-child(1) {
+    /** el 1 es la fila */
+    /** el 1 es la columna */
+    /** el 2 es la fila */
+    /** el 6 es la columna */
+    grid-area: 2/1/2/2;
+    width: auto;
+    background-color: purple;
+} 
+.grid-container .box:nth-child(2) {
+    /** el 1 es la fila */
+    /** el 1 es la columna */
+    /** el 2 es la fila */
+    /** el 6 es la columna */
+    grid-area: 2/2/2/6;
+    width: auto;
+    background-color: purple;
+}   
+.grid-container .box:nth-child(3) {
+    /** el 1 es la fila */
+    /** el 1 es la columna */
+    /** el 2 es la fila */
+    /** el 6 es la columna */
+    grid-area: 2/6/15/7;
+    width: auto;
+    height: auto;
+    background-color: purple;
+}

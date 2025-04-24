@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/**Pseudoclase :Root**/
+:root {
+    --box-color: #bd0f0f;
+    --secundary-color: #d66d0a;
+    --font-family: 'Poppins', sans-serif;
+}
+
+.tittle {
+    font-family: var(--font-family);
+}
+
+.flexbox {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: var(--box-color);
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column-reverse;
+    gap: 1rem;
+}
+
+.gridbox {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+}
+
+.gridbox .box:nth-child(1) {
+
+    /** el 1 es la fila */
+    /** el 1 es la columna */
+    /** el 2 es la fila */
+    /** el 6 es la columna */
+    grid-area: 1/1/2/3;
+}
+
+.gridbox .box:nth-child(3) {
+
+    /** el 1 es la fila */
+    /** el 1 es la columna */
+    /** el 2 es la fila */
+    /** el 6 es la columna */
+    grid-area: 1/4/2/6;
+}
+
+/**Media query*/
+@media (max-width: 1180px) and (min-width: 820px) {
+    .box {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    
+}
