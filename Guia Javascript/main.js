@@ -2,8 +2,8 @@
 document.getElementById('miFormulario').addEventListener('submit', function (event) {
     event.preventDefault();
 
-    let num1 = parseInt(document.getElementById('edad').value);
-    let resultadoDiv = document.getElementById('resultado');
+    var num1 = parseInt(document.getElementById('edad').value);
+    var resultadoDiv = document.getElementById('resultado');
 
     resultadoDiv.classList.remove('alert-success', 'alert-danger', 'd-none');
 
@@ -20,22 +20,22 @@ document.getElementById('miFormulario').addEventListener('submit', function (eve
 document.getElementById('miFormulario2').addEventListener('submit', function (event) {
     event.preventDefault();
 
-    let alumno = document.getElementById('nombrea');
+    var alumno = document.getElementById('nombrea');
     console.log(alumno.value);
 
-    let carnet = document.getElementById('carnet');
+    var carnet = document.getElementById('carnet');
     console.log(carnet.value);
 
-    let nota1 = parseInt(document.getElementById('nota1').value);
-    let nota2 = parseInt(document.getElementById('nota2').value);
-    let nota3 = parseInt(document.getElementById('nota3').value);
-    let nota4 = parseInt(document.getElementById('nota4').value);
+    var nota1 = parseInt(document.getElementById('nota1').value);
+    var nota2 = parseInt(document.getElementById('nota2').value);
+    var nota3 = parseInt(document.getElementById('nota3').value);
+    var nota4 = parseInt(document.getElementById('nota4').value);
 
     nota1 = nota1 * 0.2;
     nota2 = nota2 * 0.4;
     nota3 = nota3 * 0.1;
     nota4 = nota4 * 0.3;
-    let notatotal = nota1 + nota2 + nota3 + nota4;
+    var notatotal = nota1 + nota2 + nota3 + nota4;
 
     console.log(nota1, nota2, nota3, nota4, notatotal, alumno.value, carnet.value);
 
@@ -54,9 +54,9 @@ document.getElementById('miFormulario2').addEventListener('submit', function (ev
 document.getElementById('miFormulario3').addEventListener('submit', function (event) {
     event.preventDefault();
 
-    let clase = document.getElementById('clase');
-    let nombre = document.getElementById('nombre');
-    let sueldo =parseInt(document.getElementById('sueldo').value);
+    var clase = document.getElementById('clase');
+    var nombre = document.getElementById('nombre');
+    var sueldo =parseInt(document.getElementById('sueldo').value);
 
     console.log(clase.value, nombre.value, sueldo);
 
@@ -91,10 +91,10 @@ document.getElementById('miFormulario3').addEventListener('submit', function (ev
 document.getElementById('miFormulario4').addEventListener('submit', function (event) {
     event.preventDefault();
 
-    let num1 = parseInt(document.getElementById('numero1').value);
-    let num2 = parseInt(document.getElementById('numero2').value);
+    var num1 = parseInt(document.getElementById('numero1').value);
+    var num2 = parseInt(document.getElementById('numero2').value);
 
-    let resultadoDiv = document.getElementById('resultado4');
+    var resultadoDiv = document.getElementById('resultado4');
 
     resultadoDiv.classList.remove('alert-success', 'alert-danger', 'd-none');
 
@@ -111,7 +111,7 @@ document.getElementById('miFormulario4').addEventListener('submit', function (ev
 document.getElementById('miFormulario5').addEventListener('submit', function (event) {
     event.preventDefault();
 
-    let clase = document.getElementById('tipo');
+    var clase = document.getElementById('tipo');
 
     console.log(clase.value);
 
@@ -150,7 +150,7 @@ document.getElementById('miFormulario5').addEventListener('submit', function (ev
 document.getElementById('miFormulario6').addEventListener('submit', function (event) {
     event.preventDefault();
 
-    let clase = document.getElementById('lugar');
+    var clase = document.getElementById('lugar');
 
     console.log(clase.value);
     
@@ -191,3 +191,48 @@ document.getElementById('miFormulario6').addEventListener('submit', function (ev
 
     document.getElementById('resultados6').classList.remove('d-none');
 });
+
+
+//Ejercicio 7
+document.getElementById('miFormulario7').addEventListener('submit', function (event) {
+    event.preventDefault()
+
+    const numeros = [];
+    for (let i = 1; i <= 10; i++) {
+        const valor = parseFloat(document.getElementById(`nej7${i}`).value) || 0;
+        numeros.push(valor);
+    }
+    console.log(numeros);
+
+    let negativos = 0;
+    let positivos = 0;
+    let multiplos15 = 0;
+    let sumaPares = 0;
+
+    for (const numero of numeros) {
+        if (numero < 0) {
+            negativos++;
+        }
+        else if (numero > 0) {
+            positivos++;
+        }
+
+        if (numero !== 0 && numero % 15 === 0) {
+            multiplos15++;
+        }
+
+        if (numero % 2 === 0) {
+            sumaPares += numero;
+        }
+    }
+
+    document.getElementById('negativos').textContent = negativos;
+    document.getElementById('positivos').textContent = positivos;
+    document.getElementById('multiplos15').textContent = multiplos15;
+    document.getElementById('sumaPares').textContent = sumaPares;
+
+    console.log(negativos, positivos, multiplos15, sumaPares);
+
+    document.getElementById('resultados7').classList.remove('d-none');
+});
+
