@@ -255,3 +255,28 @@ document.getElementById('miFormulario8').addEventListener('submit', function (ev
 
 
 });
+
+//Ejercicio 9
+document.getElementById('miFormulario9').addEventListener('submit', function (event) {
+    event.preventDefault()
+
+    var celsius = parseInt(document.getElementById('cel').value);
+    console.log(celsius);
+
+    fah = (celsius * 9 / 5) + 32;
+
+    let faht = 'Grados Fahrenheit ' + fah + '°';
+    document.getElementById('faht').textContent = faht;
+
+    if (fah >= 14 && fah <= 32) {
+        document.getElementById('tempc').textContent = "Temperatura baja";
+    }  else if (fah > 32 && fah <= 68) {
+        document.getElementById('tempc').textContent = "Temperatura adecuada";
+    } else if (fah > 68 && fah <= 96) {
+        document.getElementById('tempc').textContent = "Temperatura alta";
+    } else {
+        document.getElementById('tempc').textContent = "Temperatura desconocida";
+    }
+
+});
+
