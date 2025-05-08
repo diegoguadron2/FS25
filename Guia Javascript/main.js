@@ -16,6 +16,7 @@ document.getElementById('miFormulario').addEventListener('submit', function (eve
     resultadoDiv.classList.remove('d-none');
 });
 
+//Ejercicio 2
 document.getElementById('miFormulario2').addEventListener('submit', function (event) {
     event.preventDefault();
 
@@ -46,7 +47,42 @@ document.getElementById('miFormulario2').addEventListener('submit', function (ev
     document.getElementById('res-nota4').textContent = nota4.toFixed(2);
     document.getElementById('res-notafinal').textContent = notatotal.toFixed(2);
     
-    // Mostrar el div de resultados
     document.getElementById('resultados').classList.remove('d-none');
+});
 
+//Ejercicio 3
+document.getElementById('miFormulario3').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    let clase = document.getElementById('clase');
+    let nombre = document.getElementById('nombre');
+    let sueldo =parseInt(document.getElementById('sueldo').value);
+
+    console.log(clase.value, nombre.value, sueldo);
+
+    switch (clase.value) {
+        case 'A':
+            sueldoa = sueldo * 1.15;
+            break;
+        case 'B':
+            sueldoa = sueldo * 1.3;
+            break;
+        case 'C':
+            sueldoa = sueldo * 1.1;
+            break;
+        case 'D':
+            sueldoa = sueldo * 1.2;
+            break;
+        default:
+            alert('Clase no válida');
+            return;
+    }
+
+    document.getElementById('res-nombre').textContent = nombre.value;
+    document.getElementById('res-clase').textContent = clase.value;
+    document.getElementById('res-sueldo1').textContent = `$${sueldo}`;
+    document.getElementById('res-sueldo2').textContent = `$${sueldoa.toFixed(2)}`;
+    document.getElementById('resultados3').classList.remove('d-none');
+
+    console.log('Su sueldo es:'+ sueldo.toFixed(2));
 });
