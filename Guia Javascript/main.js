@@ -114,8 +114,8 @@ document.getElementById('miFormulario5').addEventListener('submit', function (ev
     let clase = document.getElementById('tipo');
 
     console.log(clase.value);
-    
-    let preciof = 123, precioo = 321,  precioe = 312
+
+    var preciof = 52345, precioo = 41234,  precioe = 41234
     if (clase.value == 'A') {
         precio = preciof - (preciof * 0.15);
         document.getElementById('res-precio1').textContent = `$${preciof}`;
@@ -144,4 +144,50 @@ document.getElementById('miFormulario5').addEventListener('submit', function (ev
 
     document.getElementById('resultados5').classList.remove('d-none');
 
+});
+
+//Ejercicio 6
+document.getElementById('miFormulario6').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    let clase = document.getElementById('lugar');
+
+    console.log(clase.value);
+    
+    var preciof = 4234, precioo = 1234,  precioe = 5234
+    
+    if (clase.value == 'A') {
+        precio = preciof - (preciof * 0.15);
+        document.getElementById('lugarp').textContent = `$${preciof}`;
+        document.getElementById('res-destino').textContent = "Ciudad de Palma";
+        document.getElementById('lugard').textContent = `$${precio.toFixed(2)}`;
+
+
+    }
+    else if (clase.value == 'B') {
+        precio = precioo - (precioo * 0.15)
+        document.getElementById('lugarp').textContent = `$${precioo}`;
+        document.getElementById('res-destino').textContent = "La costa del Sol";
+        document.getElementById('lugard').textContent = `$${precio.toFixed(2)}`;
+
+
+    } else if (clase.value == 'C') {
+        precio = precioe - (precioe * 0.15)
+        document.getElementById('lugarp').textContent = `$${precioe}`;
+        document.getElementById('res-destino').textContent = "Panchimalco";
+        document.getElementById('lugard').textContent = `$${precio.toFixed(2)}`;
+
+
+    } else if (clase.value == 'D') {
+        precio = precioe - (precioe * 0.15)
+        document.getElementById('lugarp').textContent = `$${precioe}`;
+        document.getElementById('res-destino').textContent = "Puerto el Triunfo";
+        document.getElementById('lugard').textContent = `$${precio.toFixed(2)}`;
+    }
+    
+    else {
+        return;
+    }
+
+    document.getElementById('resultados6').classList.remove('d-none');
 });
