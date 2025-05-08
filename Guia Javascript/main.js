@@ -47,7 +47,6 @@ document.getElementById('miFormulario2').addEventListener('submit', function (ev
     document.getElementById('res-nota4').textContent = nota4.toFixed(2);
     document.getElementById('res-notafinal').textContent = notatotal.toFixed(2);
     
-    document.getElementById('resultados').classList.remove('d-none');
 });
 
 //Ejercicio 3
@@ -82,7 +81,6 @@ document.getElementById('miFormulario3').addEventListener('submit', function (ev
     document.getElementById('res-clase').textContent = clase.value;
     document.getElementById('res-sueldo1').textContent = `$${sueldo}`;
     document.getElementById('res-sueldo2').textContent = `$${sueldoa.toFixed(2)}`;
-    document.getElementById('resultados3').classList.remove('d-none');
 
     console.log('Su sueldo es:'+ sueldo.toFixed(2));
 });
@@ -104,7 +102,6 @@ document.getElementById('miFormulario4').addEventListener('submit', function (ev
     
     resultadoDiv.classList.add(num1 > num2 ? 'alert-success' : 'alert-danger');
 
-    resultadoDiv.classList.remove('d-none');
 });
 
 //Ejercicio 5
@@ -142,7 +139,6 @@ document.getElementById('miFormulario5').addEventListener('submit', function (ev
         return;
     }
 
-    document.getElementById('resultados5').classList.remove('d-none');
 
 });
 
@@ -189,7 +185,6 @@ document.getElementById('miFormulario6').addEventListener('submit', function (ev
         return;
     }
 
-    document.getElementById('resultados6').classList.remove('d-none');
 });
 
 
@@ -233,6 +228,30 @@ document.getElementById('miFormulario7').addEventListener('submit', function (ev
 
     console.log(negativos, positivos, multiplos15, sumaPares);
 
-    document.getElementById('resultados7').classList.remove('d-none');
 });
 
+
+//Ejercicio 8
+document.getElementById('miFormulario8').addEventListener('submit', function (event) {
+    event.preventDefault()
+
+    var tablam = parseInt(document.getElementById('tablam').value);
+    console.log(tablam);
+
+    let tablaHTML = '<h3>Tabla de multiplicar del ' + tablam + '</h3><table class="table table-bordered">';
+
+    for (let i = 1; i <= 10; i++) {
+        tablaHTML += `
+            <tr>
+                <td>${tablam} × ${i}</td>
+                <td>=</td>
+                <td>${tablam * i}</td>
+            </tr>
+        `;
+    }
+    
+    tablaHTML += '</table>';
+    document.getElementById('resultadoTabla').innerHTML = tablaHTML;
+
+
+});
