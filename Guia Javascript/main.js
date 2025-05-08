@@ -106,3 +106,42 @@ document.getElementById('miFormulario4').addEventListener('submit', function (ev
 
     resultadoDiv.classList.remove('d-none');
 });
+
+//Ejercicio 5
+document.getElementById('miFormulario5').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    let clase = document.getElementById('tipo');
+
+    console.log(clase.value);
+    
+    let preciof = 123, precioo = 321,  precioe = 312
+    if (clase.value == 'A') {
+        precio = preciof - (preciof * 0.15);
+        document.getElementById('res-precio1').textContent = `$${preciof}`;
+        document.getElementById('res-carro').textContent = "Ford Fiesta";
+        document.getElementById('res-precio2').textContent = `$${precio.toFixed(2)}`;
+
+
+    }
+    else if (clase.value == 'B') {
+        precio = precioo - (precioo * 0.15)
+        document.getElementById('res-precio1').textContent = `$${precioo}`;
+        document.getElementById('res-carro').textContent = "Ford Focus";
+        document.getElementById('res-precio2').textContent = `$${precio.toFixed(2)}`;
+
+
+    } else if (clase.value == 'C') {
+        precio = precioe - (precioe * 0.15)
+        document.getElementById('res-precio1').textContent = `$${precioe}`;
+        document.getElementById('res-carro').textContent = "Ford Escape";
+        document.getElementById('res-precio2').textContent = `$${precio.toFixed(2)}`;
+
+
+    } else {
+        return;
+    }
+
+    document.getElementById('resultados5').classList.remove('d-none');
+
+});

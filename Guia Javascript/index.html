@@ -117,7 +117,36 @@
                             </form>
                             <div id="resultado4" class="mt-4 alert d-none" role="alert">
                             </div>
-                            
+                            <hr>
+                            <div class="container mt-5">
+                                <h2>Ejercicio 5</h2>
+                                <form id="miFormulario5">
+                                    <div class="mb-3">
+                                        <label for="tipo" class="select-label mt-1">Tipo de carro:</label>
+                                        <select class="form-select" id="tipo" required>
+                                            <option value="" selected disabled>-- Elija una opción --</option>
+                                            <option value="A">FORD FIESTA</option>
+                                            <option value="B">FORD FOCUS</option>
+                                            <option value="C">FORD ESCAPE </option>
+                                        </select>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Calcular</button>
+                                </form>
+            
+                                <div id="resultados5" class="mt-4 p-4 bg-secondary rounded text-dark d-none">
+                                    <h4 class="mb-3">Su carro es:</h4>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p><strong>Carro:</strong> <span id="res-carro"></span></p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p><strong>Precio:</strong> <span id="res-precio1"></span></p>
+                                        </div>
+                                    </div>
+                                    <div class="alert alert-info mt-3">
+                                        <h5 class="mb-0"><strong>Precio con desceunto:</strong> <span id="res-precio2"></span></h5>
+                                    </div>
+                                </div>
                         </div>
                     </div>
                 </div>
