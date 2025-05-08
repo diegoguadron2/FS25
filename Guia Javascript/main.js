@@ -86,3 +86,23 @@ document.getElementById('miFormulario3').addEventListener('submit', function (ev
 
     console.log('Su sueldo es:'+ sueldo.toFixed(2));
 });
+
+//Ejercicio 4
+document.getElementById('miFormulario4').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    let num1 = parseInt(document.getElementById('numero1').value);
+    let num2 = parseInt(document.getElementById('numero2').value);
+
+    let resultadoDiv = document.getElementById('resultado4');
+
+    resultadoDiv.classList.remove('alert-success', 'alert-danger', 'd-none');
+
+    resultadoDiv.textContent = num1 > num2 
+    ? "El numero mayor es " + num1 
+    : "El numero mayor es " + num2;
+    
+    resultadoDiv.classList.add(num1 > num2 ? 'alert-success' : 'alert-danger');
+
+    resultadoDiv.classList.remove('d-none');
+});
