@@ -259,8 +259,88 @@
                         </form>
                         <div id="resultados8" class="mt-4 p-4 bg-secondary rounded text-dark">
                             <h4 class="mb-3">Datos:</h4>
-                            <h5 class="mb-3"><div id="faht" class="mt-4"></div></h5>
-                            <h5 class="mb-3"><div id="tempc" class="mt-4"></div></h5>
+                            <h5 class="mb-3">
+                                <div id="faht" class="mt-4"></div>
+                            </h5>
+                            <h5 class="mb-3">
+                                <div id="tempc" class="mt-4"></div>
+                            </h5>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="container mt-5">
+                        <h2>Ejercicio 10</h2>
+                        <form id="miFormulario10">
+                            <div class="mb-3">
+                                <label>Ingrese las edades:</label>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <h5>Turno Mañana (5 estudiantes)</h5>
+                                        <input type="number" id="edadM1" class="form-control mb-2" placeholder="Edad 1"
+                                            required>
+                                        <input type="number" id="edadM2" class="form-control mb-2" placeholder="Edad 2"
+                                            required>
+                                        <input type="number" id="edadM3" class="form-control mb-2" placeholder="Edad 3"
+                                            required>
+                                        <input type="number" id="edadM4" class="form-control mb-2" placeholder="Edad 4"
+                                            required>
+                                        <input type="number" id="edadM5" class="form-control mb-2" placeholder="Edad 5"
+                                            required>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h5>Turno Tarde (6 estudiantes)</h5>
+                                        <input type="number" id="edadT1" class="form-control mb-2" placeholder="Edad 1"
+                                            required>
+                                        <input type="number" id="edadT2" class="form-control mb-2" placeholder="Edad 2"
+                                            required>
+                                        <input type="number" id="edadT3" class="form-control mb-2" placeholder="Edad 3"
+                                            required>
+                                        <input type="number" id="edadT4" class="form-control mb-2" placeholder="Edad 4"
+                                            required>
+                                        <input type="number" id="edadT5" class="form-control mb-2" placeholder="Edad 5"
+                                            required>
+                                        <input type="number" id="edadT6" class="form-control mb-2" placeholder="Edad 6"
+                                            required>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h5>Turno Noche (11 estudiantes)</h5>
+                                        <input type="number" id="edadN1" class="form-control mb-2" placeholder="Edad 1">
+                                        <input type="number" id="edadN2" class="form-control mb-2" placeholder="Edad 2">
+                                        <input type="number" id="edadN3" class="form-control mb-2" placeholder="Edad 3">
+                                        <input type="number" id="edadN4" class="form-control mb-2" placeholder="Edad 4">
+                                        <input type="number" id="edadN5" class="form-control mb-2" placeholder="Edad 5">
+                                        <input type="number" id="edadN6" class="form-control mb-2" placeholder="Edad 6">
+                                        <input type="number" id="edadN7" class="form-control mb-2" placeholder="Edad 7">
+                                        <input type="number" id="edadN8" class="form-control mb-2" placeholder="Edad 8">
+                                        <input type="number" id="edadN9" class="form-control mb-2" placeholder="Edad 9">
+                                        <input type="number" id="edadN10" class="form-control mb-2"
+                                            placeholder="Edad 10">
+                                        <input type="number" id="edadN11" class="form-control mb-2"
+                                            placeholder="Edad 11">
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Calcular Promedios</button>
+                            </div>
+                        </form>
+
+                        <div id="resultados10" class="mt-4 p-4 bg-secondary rounded text-dark">
+                            <h4 class="mb-3">Resultados:</h4>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <p><strong>Promedio Mañana:</strong> <span id="promedioMañana"></span></p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p><strong>Promedio Tarde:</strong> <span id="promedioTarde"></span></p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p><strong>Promedio Noche:</strong> <span id="promedioNoche"></span></p>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-12">
+                                    <p><strong>Turno con mayor promedio:</strong> <span id="mayorPromedio"></span></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

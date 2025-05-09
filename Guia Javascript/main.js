@@ -7,10 +7,10 @@ document.getElementById('miFormulario').addEventListener('submit', function (eve
 
     resultadoDiv.classList.remove('alert-success', 'alert-danger', 'd-none');
 
-    resultadoDiv.textContent = num1 >= 18 
-    ? "La persona es mayor de edad" 
-    : "La persona es menor de edad";
-    
+    resultadoDiv.textContent = num1 >= 18
+        ? "La persona es mayor de edad"
+        : "La persona es menor de edad";
+
     resultadoDiv.classList.add(num1 >= 18 ? 'alert-success' : 'alert-danger');
 
     resultadoDiv.classList.remove('d-none');
@@ -46,7 +46,7 @@ document.getElementById('miFormulario2').addEventListener('submit', function (ev
     document.getElementById('res-nota3').textContent = nota3.toFixed(2);
     document.getElementById('res-nota4').textContent = nota4.toFixed(2);
     document.getElementById('res-notafinal').textContent = notatotal.toFixed(2);
-    
+
 });
 
 //Ejercicio 3
@@ -55,7 +55,7 @@ document.getElementById('miFormulario3').addEventListener('submit', function (ev
 
     var clase = document.getElementById('clase');
     var nombre = document.getElementById('nombre');
-    var sueldo =parseInt(document.getElementById('sueldo').value);
+    var sueldo = parseInt(document.getElementById('sueldo').value);
 
     console.log(clase.value, nombre.value, sueldo);
 
@@ -82,7 +82,7 @@ document.getElementById('miFormulario3').addEventListener('submit', function (ev
     document.getElementById('res-sueldo1').textContent = `$${sueldo}`;
     document.getElementById('res-sueldo2').textContent = `$${sueldoa.toFixed(2)}`;
 
-    console.log('Su sueldo es:'+ sueldo.toFixed(2));
+    console.log('Su sueldo es:' + sueldo.toFixed(2));
 });
 
 //Ejercicio 4
@@ -96,10 +96,10 @@ document.getElementById('miFormulario4').addEventListener('submit', function (ev
 
     resultadoDiv.classList.remove('alert-success', 'alert-danger', 'd-none');
 
-    resultadoDiv.textContent = num1 > num2 
-    ? "El numero mayor es " + num1 
-    : "El numero mayor es " + num2;
-    
+    resultadoDiv.textContent = num1 > num2
+        ? "El numero mayor es " + num1
+        : "El numero mayor es " + num2;
+
     resultadoDiv.classList.add(num1 > num2 ? 'alert-success' : 'alert-danger');
 
 });
@@ -112,7 +112,7 @@ document.getElementById('miFormulario5').addEventListener('submit', function (ev
 
     console.log(clase.value);
 
-    var preciof = 52345, precioo = 41234,  precioe = 41234
+    var preciof = 52345, precioo = 41234, precioe = 41234
     if (clase.value == 'A') {
         precio = preciof - (preciof * 0.15);
         document.getElementById('res-precio1').textContent = `$${preciof}`;
@@ -149,9 +149,9 @@ document.getElementById('miFormulario6').addEventListener('submit', function (ev
     var clase = document.getElementById('lugar');
 
     console.log(clase.value);
-    
-    var preciof = 4234, precioo = 1234,  precioe = 5234
-    
+
+    var preciof = 4234, precioo = 1234, precioe = 5234
+
     if (clase.value == 'A') {
         precio = preciof - (preciof * 0.15);
         document.getElementById('lugarp').textContent = `$${preciof}`;
@@ -180,7 +180,7 @@ document.getElementById('miFormulario6').addEventListener('submit', function (ev
         document.getElementById('res-destino').textContent = "Puerto el Triunfo";
         document.getElementById('lugard').textContent = `$${precio.toFixed(2)}`;
     }
-    
+
     else {
         return;
     }
@@ -249,7 +249,7 @@ document.getElementById('miFormulario8').addEventListener('submit', function (ev
             </tr>
         `;
     }
-    
+
     tablaHTML += '</table>';
     document.getElementById('resultadoTabla').innerHTML = tablaHTML;
 
@@ -270,7 +270,7 @@ document.getElementById('miFormulario9').addEventListener('submit', function (ev
 
     if (fah >= 14 && fah <= 32) {
         document.getElementById('tempc').textContent = "Temperatura baja";
-    }  else if (fah > 32 && fah <= 68) {
+    } else if (fah > 32 && fah <= 68) {
         document.getElementById('tempc').textContent = "Temperatura adecuada";
     } else if (fah > 68 && fah <= 96) {
         document.getElementById('tempc').textContent = "Temperatura alta";
@@ -280,3 +280,66 @@ document.getElementById('miFormulario9').addEventListener('submit', function (ev
 
 });
 
+//Ejercicio 10
+document.getElementById('miFormulario10').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const edadesMañana = [
+        parseInt(document.getElementById('edadM1').value),
+        parseInt(document.getElementById('edadM2').value),
+        parseInt(document.getElementById('edadM3').value),
+        parseInt(document.getElementById('edadM4').value),
+        parseInt(document.getElementById('edadM5').value)
+    ];
+
+    const edadesTarde = [
+        parseInt(document.getElementById('edadT1').value),
+        parseInt(document.getElementById('edadT2').value),
+        parseInt(document.getElementById('edadT3').value),
+        parseInt(document.getElementById('edadT4').value),
+        parseInt(document.getElementById('edadT5').value),
+        parseInt(document.getElementById('edadT6').value)
+    ];
+
+    const edadesNoche = [
+        parseInt(document.getElementById('edadN1').value),
+        parseInt(document.getElementById('edadN2').value),
+        parseInt(document.getElementById('edadN3').value),
+        parseInt(document.getElementById('edadN4').value),
+        parseInt(document.getElementById('edadN5').value),
+        parseInt(document.getElementById('edadN6').value),
+        parseInt(document.getElementById('edadN7').value),
+        parseInt(document.getElementById('edadN8').value),
+        parseInt(document.getElementById('edadN9').value),
+        parseInt(document.getElementById('edadN10').value),
+        parseInt(document.getElementById('edadN11').value)
+    ];
+
+    const promedioMañana = edadesMañana.reduce((a, b) => a + b, 0) / edadesMañana.length;
+    const promedioTarde = edadesTarde.reduce((a, b) => a + b, 0) / edadesTarde.length;
+    const promedioNoche = edadesNoche.reduce((a, b) => a + b, 0) / edadesNoche.length;
+
+    let mayor;
+    let turnoMayor;
+
+    if (promedioMañana >= promedioTarde && promedioMañana >= promedioNoche) {
+        mayor = promedioMañana;
+        turnoMayor = "Turno Mañana";
+    } else if (promedioTarde >= promedioMañana && promedioTarde >= promedioNoche) {
+        mayor = promedioTarde;
+        turnoMayor = "Turno Tarde";
+    } else {
+        mayor = promedioNoche;
+        turnoMayor = "Turno Noche";
+    }
+
+    console.log(edadesMañana, edadesTarde, edadesNoche, promedioMañana, promedioTarde, promedioNoche, mayor, turnoMayor);
+
+    document.getElementById('promedioMañana').textContent = promedioMañana.toFixed(0);
+    document.getElementById('promedioTarde').textContent = promedioTarde.toFixed(0);
+    document.getElementById('promedioNoche').textContent = promedioNoche.toFixed(0);
+
+    document.getElementById('mayorPromedio').textContent = turnoMayor;
+});
+
+//No debi hacerlo asi xd, me tarde mucho ☠☠
